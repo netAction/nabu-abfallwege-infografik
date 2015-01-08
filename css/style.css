@@ -1,0 +1,75 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: #eee;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-image: url("../images/background.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
+body.scrolling {
+	cursor: move;
+}
+body.overview {
+	cursor: zoom-in;
+}
+
+
+#poster {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 1000px;
+	z-index: 1;
+	margin: auto;
+}
+body.overview #poster {
+	position: absolute;
+	max-width: 100%;
+	width: auto;
+	min-width: auto;
+	max-height: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+img#search-icon {
+	display: none;
+}
+body.overview img#search-icon {
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	display: block;
+	width: 200px;
+	margin: auto;
+	z-index: 2;
+}
+
+
+
+#layer {
+	/* verdeckt alles, das nicht von der Maus erwischt werden soll */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+
