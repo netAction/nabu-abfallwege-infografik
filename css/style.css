@@ -19,6 +19,8 @@ body {
 	background-image: url("../images/background.jpg");
 	background-size: cover;
 	background-attachment: fixed;
+	text-align: center;
+	line-height: 0;
 }
 body.scrolling {
 	cursor: move;
@@ -28,17 +30,25 @@ body.overview {
 }
 
 
+#poster-wrapper {
+	position: relative;
+	display: inline-block;
+}
+body.overview #poster-wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+
+
 #poster {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	position: relative;
+	top: 0; left: 0; right: 0; bottom: 0;
 	width: 1000px;
 	z-index: 1;
-	margin: auto;
 }
 body.overview #poster {
+	margin: auto;
 	position: absolute;
 	max-width: 100%;
 	width: auto;
@@ -73,3 +83,47 @@ body.overview img#search-icon {
 }
 
 
+.marker {
+	z-index: 13;
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	height: 30px;
+	width: 30px;
+	background-image: url("../images/info.png");
+	background-size: cover;
+	cursor: pointer;
+}
+body.overview .marker {
+	display: none;
+}
+
+.marker .marker-body {
+	display: none;
+	position: absolute;
+	top: 33px;
+	left: -143px;
+	width: 300px;
+	background-color: #C3DBF9;
+	border: 7px solid #2E63CD;
+	border-radius: 15px;
+}
+.marker .marker-body h2 {
+	line-height: 1.1em;
+	font-size: 18px;
+	font-family: sans-serif;
+}
+.marker .marker-body p {
+	line-height: 1.1em;
+	font-size: 12px;
+	font-family: sans-serif;
+}
+
+
+#logo img {
+	position: fixed;
+	top: 20px;
+	left: 50px;
+	width: 80px;
+	z-index: 12;
+}

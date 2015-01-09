@@ -31,3 +31,7 @@ var updateScrollPos = function(e) {
 		.scrollLeft($(window).scrollLeft() + (clickX - e.pageX))
 		.scrollTop($(window).scrollTop() + (clickY - e.pageY));
 }
+
+$(".marker").click(function() {
+	$(this).find(".marker-body").fadeToggle();
+})
