@@ -19,7 +19,6 @@ $("#layer").on({
 		clicked = false;
 		if (!moved) {
 			// not moved
-			$("body").toggleClass("overview");
 		}
 		$('body').removeClass('scrolling');
 	}
@@ -34,4 +33,20 @@ var updateScrollPos = function(e) {
 
 $(".marker").click(function() {
 	$(this).find(".marker-body").fadeToggle();
-})
+});
+
+$("#layer, #search-icon").click(function(){
+	$("body").removeClass("overview");
+});
+
+$("#menu-icon").click(function() {
+	if( $(this).hasClass("active") ) {
+		// Disable menu
+		$(this).removeClass("active");
+		$("#menu").slideUp();
+	} else {
+		// Enable menu
+		$(this).addClass("active");
+		$("#menu").slideDown();
+	}
+});

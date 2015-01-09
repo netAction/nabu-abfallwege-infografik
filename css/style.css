@@ -47,6 +47,24 @@ body.overview #poster-wrapper {
 	width: 1000px;
 	z-index: 1;
 }
+
+
+@media(max-width:900px) {
+	#poster {
+		width: 1000px;
+	}
+}
+@media(min-width:901px) {
+	#poster {
+		width: 100%;
+	}
+}
+@media(min-width:1400px) {
+	#poster {
+		width: 1200px;
+	}
+}
+
 body.overview #poster {
 	margin: auto;
 	position: absolute;
@@ -67,8 +85,91 @@ body.overview img#search-icon {
 	display: block;
 	width: 200px;
 	margin: auto;
-	z-index: 2;
+	z-index: 11;
+	opacity: 0.7;
+	transition: all 0.5s ease;
 }
+body.overview img#search-icon:hover {
+	opacity: 1;
+}
+
+
+
+img#menu-icon {
+	position: fixed;
+	top: 20px; right: 20px;
+	display: block;
+	width: 60px;
+	z-index: 11;
+	cursor: pointer;
+	border-radius: 3px;
+	transition: all 0.5s ease;
+}
+img#menu-icon:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+img#menu-icon.active {
+	background-color: white;
+	box-shadow: 0 0 100px white;
+}
+
+
+#menu {
+	position: fixed;
+	top: 90px; right: 0; left: 0;
+	z-index: 20;
+	cursor: default;
+	display: none;
+}
+#menu a {
+	line-height: 1.1em;
+	padding: 15px;
+	display: block;
+	background-color: white;
+	color: #0071BA;
+	text-decoration: none;
+	font-family: sans-serif;
+	border: 3px solid white;
+	border-width: 5px 0 5px 0;
+	margin-bottom: 15px;
+}
+@media(max-width:900px) {
+	#menu a {
+		font-size: 14px;
+	}
+}
+@media(min-width:901px) {
+	#menu a {
+		font-size: 24px;
+	}
+}
+@media(min-width:1400px) {
+	#menu a {
+		font-size: 34px;
+	}
+}
+
+
+#menu a:active, #menu a:hover, #menu a:focus {
+//	border-color: #0071BA;
+	box-shadow: 0 0 10px white;
+}
+
+
+#logo img {
+	position: fixed;
+	top: 12px;
+	left: 50px;
+	width: 80px;
+	z-index: 12;
+	border-radius: 3px;
+	padding: 10px;
+	transition: all 0.5s ease;
+}
+#logo:hover img {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
 
 
 
@@ -119,11 +220,3 @@ body.overview .marker {
 	font-family: sans-serif;
 }
 
-
-#logo img {
-	position: fixed;
-	top: 20px;
-	left: 50px;
-	width: 80px;
-	z-index: 12;
-}
