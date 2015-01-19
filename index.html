@@ -33,7 +33,7 @@
 				right: 0;
 				width: 60%;
 				top: 50%;
-				transform: translateY(-50%);
+				transform: translateY(-50%) rotate(2deg);
 				box-shadow: 0 0 10px black;
 				text-align: center;
 				background-image: url("images/paper.jpg");
@@ -76,10 +76,16 @@
 				#metabox, #poster {
 					position: static;
 					margin: 5% auto;
-					transform: none;
 					top: 0;
-					width: 80%;
 					max-height: auto;
+				}
+				#metabox {
+					transform: rotate(2deg);
+					width: 60%;
+				}
+				#poster {
+					transform: none;
+					width: 80%;
 				}
 			}
 		</style>
