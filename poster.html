@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114-precomposed.png" />
+
+		<title>Abfallwege Infografik – NABU</title>
+		<style type="text/css">
+			html {
+				height: 100%;
+				width: 100%;
+			}
+
+			body {
+				padding: 0;
+				margin: 0;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				position: relative;
+				height: 100%;
+				width: 100%;
+				line-height: 0;
+				text-align: center;
+				background-image: url("images/background.jpg");
+			}
+			body.scrolling {
+				cursor: move;
+			}
+
+			#poster-wrapper {
+				position: relative;
+				display: inline-block;
+			}
+
+			#poster {
+				position: relative;
+				top: 0; left: 0; right: 0; bottom: 0;
+				width: 1000px;
+				z-index: 1;
+				box-shadow: 0 0 10px black;
+			}
+
+
+			@media(max-width:900px) {
+				#poster {
+					width: 1000px;
+				}
+			}
+			@media(min-width:901px) {
+				#poster {
+					width: 100%;
+				}
+			}
+			@media(min-width:1400px) {
+				#poster {
+					margin-top:30px;
+					margin-bottom: 30px;
+					width: 1200px;
+				}
+			}
+
+
+			a#close {
+				position: fixed;
+				top: 20px; right: 20px;
+				display: block;
+				width: 60px;
+				z-index: 11;
+				cursor: pointer;
+				border-radius: 100%;
+				transition: all 0.5s ease;
+			}
+			a#close:hover {
+				background-color: rgba(255, 255, 255, 0.3);
+			}
+			a#close.active {
+				background-color: white;
+				box-shadow: 0 0 100px white;
+			}
+			a#close img {
+				width: 100%;
+			}
+
+
+			#layer {
+				/* verdeckt alles, das nicht von der Maus erwischt werden soll */
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 10;
+			}
+
+
+
+			.marker {
+				z-index: 13;
+				position: absolute;
+				left: 10%;
+				top: 10%;
+				height: 30px;
+				width: 30px;
+				background-image: url("../images/info.png");
+				background-size: cover;
+				cursor: pointer;
+			}
+			body.overview .marker {
+				display: none;
+			}
+
+			.marker .marker-body {
+				display: none;
+				position: absolute;
+				top: 33px;
+				left: -143px;
+				width: 300px;
+				background-color: #C3DBF9;
+				border: 7px solid #2E63CD;
+				border-radius: 15px;
+			}
+			.marker .marker-body h2 {
+				line-height: 1.1em;
+				font-size: 18px;
+				font-family: sans-serif;
+			}
+			.marker .marker-body p {
+				line-height: 1.1em;
+				font-size: 12px;
+				font-family: sans-serif;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div id="poster-wrapper">
+			<img src="images/poster2.jpg" id="poster">
+			<div class="marker" style="top: 13%; left: 20%;">
+				<div class="marker-body">
+					<h2>Haus</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					</p>
+				</div>
+			</div><!-- marker -->
+			<div class="marker" style="top: 33%; left: 31%;">
+				<div class="marker-body">
+					<h2>Sortieranlage</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					</p>
+				</div>
+			</div><!-- marker -->
+			<div class="marker" style="top: 80%; left: 77%;">
+				<div class="marker-body">
+					<h2>Bahnhof</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+					</p>
+				</div>
+			</div><!-- marker -->
+		</div><!-- poster-wrapper -->
+
+		<a href="index.html" id="close"><img src="images/close.png"></a>
+		
+		
+		<div id="layer"></div>
+
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/script.js"></script>
+
+	</body>
+</html>
